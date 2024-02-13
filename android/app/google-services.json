@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "404469091150",
+    "project_id": "collegeproject-9246d",
+    "storage_bucket": "collegeproject-9246d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404469091150:android:bf0c5b96b409a7c5edec1f",
+        "android_client_info": {
+          "package_name": "com.example.baranwal_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiqeejqXX-VTCffd0J4h9DotWo7hXmLC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
