@@ -1,7 +1,13 @@
 
+import 'package:baranwal_project/consts/colors.dart';
+import 'package:baranwal_project/consts/consts.dart';
+import 'package:baranwal_project/pages/Authentication/signup_screen.dart';
+import 'package:baranwal_project/pages/Home/home.dart';
 import 'package:baranwal_project/pages/Home/homePage.dart';
+import 'package:baranwal_project/widgets_common/our_button.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 class authDecider extends StatefulWidget {
 
   @override
@@ -85,57 +91,69 @@ class _authDeciderState
                     ),
                   ),
                 ),
+
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 44, 0, 0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 16),
-                        child: ElevatedButton(
-                        
-                          onPressed: () {
-                               Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                        builder: (context) => HomePage()));
+                        padding: const EdgeInsets.all(8.0),
+                        child: ourButton(
+                          onPress: (){
+                            Get.to(() => const Home());
                           },
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.mail_outline_outlined,
-                                color: Colors.white,
-                                size: 24,
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
-                                child: Text(
-                                  'Sign up with Email',
-                                  style: TextStyle(
-                                        fontFamily: 'Urbanist',
-                                        color: Colors.white,
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                ),
-                              )
-                            ],
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.all(15),
-                            primary: Color(0xFF101213),
-                            onPrimary: Color(0xFF101213),
-                            onSurface: Color(0xFF101213),
-                            elevation: 0,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                          ),
-                        )
+                          color: darkFontGrey,
+                          textColor: whiteColor,
+                          title: " Signup with Email",
+                        ).box.size(350, 60).make(),
                       ),
+                // Padding(
+                //   padding: EdgeInsetsDirectional.fromSTEB(0, 44, 0, 0),
+                //   child: Column(
+                //     mainAxisSize: MainAxisSize.max,
+                //     mainAxisAlignment: MainAxisAlignment.end,
+                //     children: [
+                //       Padding(
+                //         padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 16),
+                //         child: ElevatedButton(
+                        
+                //           onPressed: () {
+                //                Navigator.of(context).push(
+                //                     MaterialPageRoute(
+                //                         builder: (context) => HomePage()));
+                //           },
+                //           child: Row(
+                //             mainAxisSize: MainAxisSize.max,
+                //             mainAxisAlignment: MainAxisAlignment.center,
+                //             children: [
+                //               Icon(
+                //                 Icons.mail_outline_outlined,
+                //                 color: Colors.white,
+                //                 size: 24,
+                //               ),
+                //               Padding(
+                //                 padding:
+                //                     EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
+                //                 child: Text(
+                //                   'Sign up with Email',
+                //                   style: TextStyle(
+                //                         fontFamily: 'Urbanist',
+                //                         color: Colors.white,
+                //                         fontSize: 18,
+                //                         fontWeight: FontWeight.bold,
+                //                       ),
+                //                 ),
+                //               )
+                //             ],
+                //           ),
+                //           style: ElevatedButton.styleFrom(
+                //             padding: EdgeInsets.all(15),
+                //             primary: Color(0xFF101213),
+                //             onPrimary: Color(0xFF101213),
+                //             onSurface: Color(0xFF101213),
+                //             elevation: 0,
+                //             shape: RoundedRectangleBorder(
+                //               borderRadius: BorderRadius.circular(50),
+                //             ),
+                //           ),
+                //         )
+                //       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 12),
                         child: Text(
@@ -149,51 +167,63 @@ class _authDeciderState
                                   ),
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 16),
-                        child: ElevatedButton(
-                          onPressed: () {
-                            print('Button pressed ...');
-                          },
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.mail_outline_outlined,
-                                color: Colors.black,
-                                size: 24,
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
-                                child: Text(
-                                  'Sign up with Google',
-                                  style: TextStyle(
-                                        fontFamily: 'Urbanist',
-                                        color: Colors.black,
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                ),
-                              )
-                            ],
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            // add border color
-                            side: BorderSide(color: Colors.black, width: 1),
-                            padding: EdgeInsets.all(15),
-                            primary: Colors.white,
-                            onPrimary: Colors.white,
-                            onSurface: Colors.white,
-                            elevation: 0,
+                      // Padding(
+                      //   padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 16),
+                      //   child: ElevatedButton(
+                      //     onPressed: () {
+                      //       print('Button pressed ...');
+                      //     },
+                      //     child: Row(
+                      //       mainAxisSize: MainAxisSize.max,
+                      //       mainAxisAlignment: MainAxisAlignment.center,
+                      //       children: [
+                      //         Icon(
+                      //           Icons.mail_outline_outlined,
+                      //           color: Colors.black,
+                      //           size: 24,
+                      //         ),
+                      //         Padding(
+                      //           padding:
+                      //               EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
+                      //           child: Text(
+                      //             'Sign up with Google',
+                      //             style: TextStyle(
+                      //                   fontFamily: 'Urbanist',
+                      //                   color: Colors.black,
+                      //                   fontSize: 18,
+                      //                   fontWeight: FontWeight.bold,
+                      //                 ),
+                      //           ),
+                      //         )
+                      //       ],
+                      //     ),
+                      //     style: ElevatedButton.styleFrom(
+                      //       // add border color
+                      //       side: BorderSide(color: Colors.black, width: 1),
+                      //       padding: EdgeInsets.all(15),
+                      //       primary: Colors.white,
+                      //       onPrimary: Colors.white,
+                      //       onSurface: Colors.white,
+                      //       elevation: 0,
                             
-                            shape: RoundedRectangleBorder(
+                      //       shape: RoundedRectangleBorder(
                               
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                          ),
-                        )
+                      //         borderRadius: BorderRadius.circular(50),
+                      //       ),
+                      //     ),
+                      //   )
+                      // ),
+
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ourButton(
+                          onPress: (){
+                            Get.to(() => const SignupScreen());
+                          },
+                          color: whiteColor,
+                          textColor: darkFontGrey,
+                          title: " Signup with google",
+                        ).box.size(350, 60).make(),
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 16),
@@ -268,12 +298,16 @@ class _authDeciderState
                       ),
                     ],
                   ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+                  ),
+        )
+        
+        )
+        );
+        }
+
+             
+          
+        
+      
   }
-}
+

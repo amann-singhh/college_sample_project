@@ -7,6 +7,7 @@
 import 'package:baranwal_project/consts/consts.dart';
 import 'package:baranwal_project/pages/Home/home.dart';
 import 'package:baranwal_project/pages/Home/homePage.dart';
+import 'package:baranwal_project/pages/Authentication/signup_signin.dart';
 import 'package:baranwal_project/widgets_common/applogo_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -23,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
   changeScreen(){
     Future.delayed(const Duration(seconds: 2), (){
       // using getX
-      Get.to(()=>const Home());
+      Get.to(()=>authDecider());
 
       // auth.authStateChanges().listen((User? user){
       //   if(user == null && mounted){
@@ -38,6 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState(){
     changeScreen();
     super.initState();
+    initializeCurrentUser();
   }
   @override
   Widget build(BuildContext context) {

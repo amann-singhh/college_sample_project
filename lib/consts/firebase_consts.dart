@@ -6,6 +6,16 @@ FirebaseAuth auth = FirebaseAuth.instance;
 FirebaseFirestore firestore = FirebaseFirestore.instance;
 User? currentUser = auth.currentUser;
 
+void initializeCurrentUser(){
+  auth.authStateChanges().listen((User? user){
+    if(user != null) {
+      currentUser = user;
+  }else{
+    currentUser = null;
+  }
+});
+}
+
 // collections
 const userCollection = "users";
 // const artisianCollection = "artisians";
